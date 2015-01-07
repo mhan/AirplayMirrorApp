@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCT-zw-dbT">
+                                <rect key="frame" x="259" y="135" width="82" height="30"/>
+                                <state key="normal" title="Enable Mirroring">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleEnableMirroring:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nX0-ih-bhW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qg8-Yo-s8T">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Disable Mirroring">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleDisableMirroring:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Lw-5z-MVJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e36-l3-SEt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Show Airplay Receivers">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qg8-Yo-s8T" firstAttribute="top" secondItem="gCT-zw-dbT" secondAttribute="bottom" constant="20" id="GPZ-7P-3M1"/>
+                            <constraint firstItem="e36-l3-SEt" firstAttribute="top" secondItem="Qg8-Yo-s8T" secondAttribute="bottom" constant="38" id="YUk-vC-LPu"/>
+                            <constraint firstAttribute="centerX" secondItem="gCT-zw-dbT" secondAttribute="centerX" id="deu-xw-w0p"/>
+                            <constraint firstAttribute="centerX" secondItem="Qg8-Yo-s8T" secondAttribute="centerX" id="i8G-Ur-YIJ"/>
+                            <constraint firstAttribute="centerX" secondItem="e36-l3-SEt" secondAttribute="centerX" id="mMr-95-Gox"/>
+                            <constraint firstItem="gCT-zw-dbT" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="37" id="mT6-75-AUz"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Qg8-Yo-s8T"/>
+                                <exclude reference="e36-l3-SEt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="deu-xw-w0p"/>
+                                <exclude reference="mT6-75-AUz"/>
+                                <exclude reference="GPZ-7P-3M1"/>
+                                <exclude reference="i8G-Ur-YIJ"/>
+                                <exclude reference="YUk-vC-LPu"/>
+                                <exclude reference="mMr-95-Gox"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Qg8-Yo-s8T"/>
+                                <include reference="e36-l3-SEt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="deu-xw-w0p"/>
+                                <include reference="mT6-75-AUz"/>
+                                <include reference="GPZ-7P-3M1"/>
+                                <include reference="i8G-Ur-YIJ"/>
+                                <include reference="YUk-vC-LPu"/>
+                                <include reference="mMr-95-Gox"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
